@@ -5,53 +5,55 @@
     <title>Karina's Webpage</title>
     <style>
         h1 {color: rgb(50, 60, 200); background-color: rgb(139, 209, 241)}
-        body {background-color: rgb(220, 238, 255);}
+        body {background-color: rgb(235, 234, 203);}
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Karina's Webpage</h1>
+        <h1>Class 1 Lab</h1>
+        <img />
+        <nav>
+
+        </nav>
     </header>
 
     <main>
-        <h1>
-            Class 1 Lab
-        </h1>
-        <!--<section>
+         <!--<section>
             Section Content
         </section>
-
         //* <div>
             <span>Div Content</span>
             <span>Another Span</span>
         </div>
         -->
-            <p>
+        <article>
+            <p style="background-color: rgb(139, 209, 241)">
                 Karina has two addorable furry dogs. Their names are Nuggle and Porkee.
             </p>
 
-            <p>
+            <p style="background-color: rgb(214, 231, 182)">
                 See more about their personalitites and photos on this website!!
             </p>
 
-            <p style="color: rgb(6, 77, 18);">
+            <p style="background-color: rgb(209, 186, 166); color: rgb(6, 77, 18);">
                 Q1: How are you? Please tell us your name.
             </p>
 
-            <p style="color: rgb(139, 65, 4);">
+            <p style="background-color: rgb(224, 190, 216); color: rgb(139, 65, 4);">
                 Q2: Would you like to know more about my two addorable dogs? Yes/No
             </p>
 
-            <p style="color: rgb(90, 8, 86);">
+            <p style="background-color: rgb(218, 167, 167); color: rgb(90, 8, 86);">
                 Q3: Would you like to meet Nuggle (Corgi) or Porkee (French Bulldog) first?
             </p>
 
-            <p style="color: rgb(4, 94, 167);">
+            <p style="background-color: rgb(211, 174, 223); color: rgb(4, 94, 167);">
                 Q4: Should we start with Nuggle/Porkee's bio info or photos? bio/photos
             </p>
 
+        </article>
 
     </main>
     
@@ -61,31 +63,26 @@
 
     <script>    
         var name = prompt ("How are you? Please tell us your name.");
-
         alert ("Welcome to my webpage " + name + "!");
         console.log("Name = " + name);
-
-        var interest = prompt ("Would you like to know more about my two addorable dogs? Yes/No");
+        var interest = prompt (name + ", would you like to know more about my two addorable dogs? Yes/No");
         console.log("Interest = " + interest);
-
         if (interest == "Yes") {
-            alert ("That's awesome!! I can't wait to introduce my furry babies with you " + name + ".");
+            alert (" That's awesome!! I can't wait to introduce my furry babies with you " + name + ".");
         
-            var dogName = prompt ("Would you like to meet Nuggle (Corgi) or Porkee (French Bulldog) first?");
+            var dogName = prompt ("Would you like to meet Nuggle (Corgi) or Porkee (French Bulldog) first? " + name);
             console.log("Dog Name = " + dogName);
-
            if (dogName == "Nuggle") {
-                 alert ("Fantastic! We will start with Nuggle first!");
+                 alert ("Fantastic! " + name + "! We will start with " + dogName + " first!");
            }
           else if (dogName == "Porkee") {
-                alert ("Wonderful! We will start with Porkee first!");
+                alert ("Wonderful! " + name + "! We will start with " + dogName + " first!");
             }
           else {
                 alert ("Oops! Please re-enter the dog name. Nuggle/Porkee");    
             }
-                  var bioPhoto = prompt ("Should we start with " + dogName + "'s bio info or photos? bio/photos");
+                  var bioPhoto = prompt (name + ", should we start with " + dogName + "'s bio info or photos? bio/photos");
                   console.log("Bio or Photos = " + bioPhoto);
-
                 if (bioPhoto == "bio") {
                     alert ("Alright! " + name + "! Let's start with " + dogName + "'s " + bioPhoto + " right away!!")
                 }
@@ -94,13 +91,12 @@
                 }
         }
         else {
-            alert ("That is ok. Maybe next time!")
+            alert ("That is ok " + name + ". Maybe next time!")
             alert ("Please tell us what is your favorite animal so we can add it to our website in the future!");
             var favAnimal = prompt (name + "'s favorite animal is?")
             alert ("Thank you for letting us know! We will work on that. Have a great day!")
             console.log("Favorite Animal = " + favAnimal);
         }
-
     </script>
 
 </body>
